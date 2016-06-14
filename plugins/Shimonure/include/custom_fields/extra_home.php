@@ -30,6 +30,20 @@ function init_custom_field_home() {
                     'preview_size' => 'thumbnail',
                     'library' => 'all',
                 ),
+                array(
+                    'key' => $nombre_campo . '_field_1',
+                    'label' => 'Título',
+                    'name' => $key_campo . '_banner_titulo',
+                    'type' => 'text',
+                    'required' => 0,
+                ),
+                array(
+                    'key' => $nombre_campo . '_field_2',
+                    'label' => 'Subtítulo',
+                    'name' => $key_campo . '_banner_subtitulo',
+                    'type' => 'text',
+                    'required' => 0,
+                ),
             ),
             'location' => array(
                 array(

@@ -26,5 +26,6 @@ add_filter('wp_head', 'mbe_wp_head');
 function mbe_wp_head() {
     echo '<style>' . PHP_EOL;
     echo '.navbar-fixed-top { top: auto; }';
+    echo '@media (max-width: 768px){.navbar-fixed-top { top: 0; }}';
     echo '</style>' . PHP_EOL;
 }

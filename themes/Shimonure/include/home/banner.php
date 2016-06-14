@@ -1,15 +1,15 @@
-<?php 
-$imagen = get_field('admin_home_page_banner_principal','options');
-if(isset($imagen['url'])){
+<?php
+$imagen = get_field('admin_home_page_banner_principal', 'options');
+if (isset($imagen['url'])) {
     $imagen_url = $imagen['url'];
 }
 ?>
-<header class="intro" style="background: url('<?php echo $imagen_url?>') no-repeat center center fixed;">
+<header class="intro" style="background: url('<?php echo $imagen_url ?>') no-repeat center center fixed;">
     <div class="container">
         <div class="banner-info">
-            <h1>Rogelio Vargas Marquez</h1>
+            <h1><?php echo get_field('admin_home_page_banner_titulo', 'options') ?></h1>
             <p>
-                Bienvenido, me dedico a eso de la programación y las tecnologías de la información. Me considero un Programador Full Stack y me encantaría poder colaborar contigo.           
+                <?php echo get_field('admin_home_page_banner_subtitulo', 'options') ?>           
             </p>
 
         </div>

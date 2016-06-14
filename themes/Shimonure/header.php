@@ -88,12 +88,13 @@
                     'theme_location' => 'primary',
                     'depth' => 2,
                     'container' => 'div',
-                    'container_class' => 'collapse navbar-collapse',
-                    'container_id' => 'bs-example-navbar-collapse-1',
+                    'container_class' => 'navbar-collapse collapse',
+                    'container_id' => 'navbar-main',
                     'menu_class' => 'nav navbar-nav navbar-right',
                     'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
                     'walker' => new wp_bootstrap_navwalker())
                 );
+                 
                 ?>
 
             </div>
