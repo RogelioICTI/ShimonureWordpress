@@ -61,7 +61,7 @@
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="<?php echo $url_base_final; ?>" >Inicio</a></li>
+                        <li><a href="" >Inicio</a></li>
                         <li><a href="page-servicios.php" >Servicios</a></li>
                         <li><a href="page-portafolio.php" >Portafolio</a></li>
                         <li><a href="page-blog.php" >Blog</a></li>
