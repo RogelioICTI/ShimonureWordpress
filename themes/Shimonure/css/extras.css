@@ -76,7 +76,7 @@ h1{
 }
 
 .banner-info{
-    padding-top: 80px; 
+    padding-top: 13%; 
     color: #FFF; 
     text-align: center
 }
@@ -205,9 +205,6 @@ h1{
         height: 100%;
         padding: 0;
     }
-    .banner-info{
-        padding-top: 120px; 
-    }
     .banner-info p{
         padding-top: 50px;
     }
@@ -255,7 +252,8 @@ h1{
 /*NAV BAR*/
 .navbar-default {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
+    font-family: 'Walter Turncoat', cursive;
     /*background: rgba(0, 0, 0, .1) !important;*/
 }
 
@@ -310,6 +308,12 @@ h1{
     .division-codigo{
         height: 200px;
     }
+}
+
+.over-transparency{
+    background: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: 100%;
 }
 
 .codigo-4{

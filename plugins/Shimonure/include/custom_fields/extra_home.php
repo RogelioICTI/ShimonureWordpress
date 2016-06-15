@@ -44,6 +44,64 @@ function init_custom_field_home() {
                     'type' => 'text',
                     'required' => 0,
                 ),
+                /*
+                 * AboutMe
+                 */
+                array(
+                    'key' => $nombre_campo . '_tab_2',
+                    'type' => 'tab',
+                    'label' => 'About Me',
+                    'placement' => 'top',
+                    'endpoint' => 0,
+                ),
+                array(
+                    'key' => $nombre_campo . '_field_3',
+                    'label' => 'Título',
+                    'name' => $key_campo . '_aboutme_titulo',
+                    'type' => 'text',
+                    'required' => 0,
+                ),
+                array(
+                    'key' => $nombre_campo . '_field_4',
+                    'label' => 'Título',
+                    'name' => $key_campo . '_aboutme_mensaje',
+                    'type' => 'wysiwyg',
+                    'required' => 0,
+                ),
+                array(
+                    'key' => $nombre_campo . '_field_5',
+                    'label' => 'Imagen',
+                    'name' => $key_campo . '_aboutme_imagen',
+                    'type' => 'image',
+                    'required' => 0,
+                    'save_format' => 'object',
+                    'preview_size' => 'thumbnail',
+                    'library' => 'all',
+                ),
+                array(
+                    'key' => $nombre_campo . '_field_6',
+                    'label' => 'URL Sobre mí',
+                    'name' => $key_campo . '_aboutme_url_sobremi',
+                    'type' => 'text',
+                    'required' => 0,
+                ),
+                array(
+                    'key' => $nombre_campo . '_field_7',
+                    'label' => 'URL Currículum',
+                    'name' => $key_campo . '_aboutme_url_curriculum',
+                    'type' => 'text',
+                    'required' => 0,
+                ),
+                array(
+                    'key' => $nombre_campo . '_field_8',
+                    'label' => 'Imagen de División',
+                    'name' => $key_campo . '_aboutme_imagen_division',
+                    'type' => 'image',
+                    'required' => 0,
+                    'save_format' => 'object',
+                    'preview_size' => 'thumbnail',
+                    'library' => 'all',
+                ),
             ),
             'location' => array(
                 array(

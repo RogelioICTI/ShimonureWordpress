@@ -7,6 +7,8 @@ if (!is_admin()) {
     wp_enqueue_style('adapataciones-custom', get_template_directory_uri() . '/css/extras.css');
     wp_enqueue_style('googlefont-ptsans', 'https://fonts.googleapis.com/css?family=PT+Sans');
     wp_enqueue_style('googlefont-dosis', 'https://fonts.googleapis.com/css?family=Dosis');
+    wp_enqueue_style('googlefont-walter', 'https://fonts.googleapis.com/css?family=Walter+Turncoat');
+    wp_enqueue_style('googlefont-lakki', 'https://fonts.googleapis.com/css?family=Lakki+Reddy');
     wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 
     //Agregegado de Scripts

@@ -47,7 +47,7 @@
         <div class="navbar navbar-default navbar-fixed-top top-nav-collapse">
             <div class="container">
                 <div class="navbar-header">
-                    <a href="<?php echo $url_base_final; ?>" class="navbar-brand">Rogelio Vargas </a>
+                    <a href="<?php echo $url_base_final; ?>" class="navbar-brand">Rogelio Vargas Marquez</a>
                     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
