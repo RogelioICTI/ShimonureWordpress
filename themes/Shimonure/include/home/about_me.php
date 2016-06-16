@@ -19,7 +19,7 @@
                 $imagen_url = $imagen['url'];
             }
             ?>
-            <img class="img-responsive img-rounded " src="<?php echo $imagen_url; ?>">
+            <img class="wow fadeInRight img-responsive img-rounded " src="<?php echo $imagen_url; ?>">
         </div>
 
         <!--<div style="height: 400px" align="center"><h1 >About Me</h1></div>-->

@@ -18,10 +18,6 @@
 
         <link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?> /favicon.png" />
         <script>
-            var url_general_sitio = '<?php echo $url_base_final; ?>';
-        </script>
-
-        <script>
             (function (i, s, o, g, r, a, m) {
                 i['GoogleAnalyticsObject'] = r;
                 i[r] = i[r] || function () {
@@ -94,18 +90,12 @@
                     'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
                     'walker' => new wp_bootstrap_navwalker())
                 );
-                 
                 ?>
 
             </div>
         </div>
 
-        <?php
-        //TODO: Ajuste de NAVBAR
-        if ($GLOBALS['narbar_bandera'] != 'index.php'):
-            ?>
-            <!--<div style="height: 50px;"></div>-->
-            <?php
-        endif;
-        ?>
+
+        <!--<div style="height: 50px;"></div>-->
+
 

@@ -24,6 +24,10 @@ require_once('include/options_page.php'); //Menus de opciones extras
 add_filter('acf/settings/show_admin', '__return_false');
 
 
-
 //CUSTOM FIELDS
 require_once('include/custom_fields/extra_home.php'); 
+require_once('include/custom_fields/servicios.php'); 
+
+
+//POST TYPE
+require_once('include/post_types/servicios.php'); 

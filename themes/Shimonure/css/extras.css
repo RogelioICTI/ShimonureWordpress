@@ -53,6 +53,12 @@ h1{
     }
 }
 
+.column-center{
+    float:none; 
+    display: inline-block;
+    margin-right: -4px;
+    vertical-align: top;
+}
 
 /*Home*/
 .intro{
@@ -60,7 +66,7 @@ h1{
     width: 100%;
     height: auto;
     padding-bottom: 50px;
-    
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -134,7 +140,7 @@ h1{
     padding-bottom: 50px;
     background-color: #F1F1D4;
     background-image: url('../img/bg-square.png');
-    min-height: 450px;
+    /*min-height: 450px;*/
 
     box-shadow: inset 0px 0px 50px 0px #C1C1C1;
     -webkit-box-shadow: inset 0px 0px 50px 0px #C1C1C1;
@@ -181,7 +187,6 @@ h1{
 }
 
 .servicio-item-home:hover{
-    border: 2px solid #F01420;
     box-shadow: inset 0 0 0 25px #53a7ea;
     background-color: #FFFFEA;
     box-shadow: inset 0px 0px 50px -20px #C1C1C1;
@@ -189,7 +194,38 @@ h1{
     -moz-box-shadow: inset 0px 0px 50px -20px #C1C1C1;
     -o-box-shadow: inset 0px 0px 50px -20px #C1C1C1;
 }
-
+.effect8
+{
+    position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect8:before, .effect8:after
+{
+    content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+} 
+.effect8:after
+{
+    right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+    -moz-transform:skew(8deg) rotate(3deg);     
+    -ms-transform:skew(8deg) rotate(3deg);     
+    -o-transform:skew(8deg) rotate(3deg); 
+    transform:skew(8deg) rotate(3deg);
+}  
 
 
 .servicio-item-home p{
@@ -200,7 +236,10 @@ h1{
 
 
 
+
 @media(min-width:768px) {
+
+
     .intro {
         height: 100%;
         padding: 0;
@@ -213,13 +252,21 @@ h1{
         padding-left: 50px !important;
     }
 }
+
 @media(max-width:768px) {
     .banner-info p{
         font-size: 20px;
     }
     .trabajo-item-home{
 
-        min-height: auto;
+        /*min-height: auto;*/
+    }
+    .servicio-item-home{
+        background-color: #FFFFEA;
+        box-shadow: inset 0px 0px 50px -20px #C1C1C1;
+        -webkit-box-shadow: inset 0px 0px 50px -20px #C1C1C1;
+        -moz-box-shadow: inset 0px 0px 50px -20px #C1C1C1;
+        -o-box-shadow: inset 0px 0px 50px -20px #C1C1C1;
     }
 }
 
@@ -266,10 +313,14 @@ h1{
     color: #FFFFFF;
 }
 .navbar-link-start{
-    
+
     color: rgba(255, 255, 255, 0.61) !important;
     background-color: transparent !important;
     text-decoration: underline;
+}
+
+.navbar-link-start:focus{
+    background-color: transparent !important;
 }
 
 @media(min-width:768px) {
@@ -288,7 +339,6 @@ h1{
     .navbar-default.top-nav-collapse {
 
         padding: 0;
-        /*border-bottom: 1px solid rgba(255,255,255,.3);*/
         background-color: #022640;
         border-color: #011320;
     }
@@ -317,35 +367,6 @@ h1{
     height: 100%;
     width: 100%;
 }
-
-.codigo-4{
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/divisiones/codigo_4.jpg');
-    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/divisiones/codigo_4.jpg');
-    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/divisiones/codigo_4.jpg');
-    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/divisiones/codigo_4.jpg');
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url('../img/divisiones/codigo_4.jpg');
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/divisiones/codigo_4.jpg');
-}
-
-.codigo-2{
-
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/divisiones/codigo_6.jpg');
-    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/divisiones/codigo_6.jpg');
-    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/divisiones/codigo_6.jpg');
-    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/divisiones/codigo_6.jpg');
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url('../img/divisiones/codigo_6.jpg');
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/divisiones/codigo_6.jpg');
-}
-
-.codigo-1{
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/divisiones/codigo.jpg');
-    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/divisiones/codigo.jpg');
-    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/divisiones/codigo.jpg');
-    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/divisiones/codigo.jpg');
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url('../img/divisiones/codigo.jpg');
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/divisiones/codigo.jpg');
-}
-
 
 /*Espacios extras para acomodo*/
 

@@ -10,8 +10,8 @@ if (isset($imagen['url'])) {
         
         <div class="banner-info">
             
-            <h1><?php echo get_field('admin_home_page_banner_titulo', 'options') ?></h1>
-            <p>
+            <h1 class="wow slideInUp"><?php echo get_field('admin_home_page_banner_titulo', 'options') ?></h1>
+            <p class="wow slideInUp">
                 <?php echo get_field('admin_home_page_banner_subtitulo', 'options') ?>           
             </p>
 
