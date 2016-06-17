@@ -20,13 +20,6 @@ $servicios = get_posts($args);
 
         <div class="row text-center">
             <?php foreach ($servicios as $indice => $servicio): ?>
-
-                <script>
-                    $(document).ready(function () {
-                        console.log($("#columna-servicio-<?php echo $indice; ?>").height());
-                        ;
-                    });
-                </script>
                 <div id="columna-servicio-<?php echo $indice; ?>" class="col-md-4 col-sm-6 col-xs-12 text-center padding-bottomtop-10 column-center">
                     <script>
                         $(document).ready(function () {
