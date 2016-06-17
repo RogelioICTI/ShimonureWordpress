@@ -18,7 +18,7 @@ $servicios = get_posts($args);
             </div>
         </div>
 
-        <div class=" row text-center">
+        <div class="row text-center">
             <?php foreach ($servicios as $indice => $servicio): ?>
 
                 <script>
@@ -50,7 +50,7 @@ $servicios = get_posts($args);
                     <!--<a class="no-underline" href="<?php echo get_permalink($servicio->ID); ?>">-->
                     <div class=" wow bounceInUp">
                         <a class="no-underline" href="<?php echo get_permalink($servicio->ID); ?>">
-                            <div id="servicio-item-<?php echo $indice; ?>" class=" servicio-item-home effect8 ">
+                            <div id="servicio-item-<?php echo $indice; ?>" class="servicio-item-home effect8 ">
                                 <?php
                                 $icono = get_field('servicio_icono_home', $servicio->ID);
                                 $icono_url = "";
@@ -96,7 +96,9 @@ if (isset($imagen_div['url'])) {
 
 <script>
 
+
     $(window).load(function () {
+        
         equalheight("div[id^='servicio-item']");
     });
 

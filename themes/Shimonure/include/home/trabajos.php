@@ -1,67 +1,83 @@
+<?php
+$args = array(
+    'posts_per_page' => 6,
+    'orderby' => 'rand',
+    'order' => 'ASC',
+    'post_type' => 'portafolio',
+    'post_status' => 'publish',
+);
+
+$trabajos = get_posts($args);
+?>
 <div class="white-section">
     <div class="container padding-bottomtop-40">
         <div class="row">
             <div class="col-xs-12 padding-bottom-15">
-                <h1>En lo que colaboré</h1>
+                <h1><?php echo get_field('admin_home_page_portafolio_titulo', 'options'); ?></h1>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6 text-justify padding-bottomtop-10">
-            <div class="trabajo-item-home padding-leftright-10">
-                <a href="page-portafolio.php"><img class="img-responsive" src="img/portafolio/fondo_bichos.png"></a>
-                <a href="page-portafolio.php"><h3>ByeByeBichitos</h3></a>
-                <p><a href="http://byebyebichitos.com/">Página web</a> de una serie de Clínicas Especializadas en el tratamiento de la Pediculosis. Además, cuenta con la información de las complicaciones que este tipo de padecimiento conlleva.</p>
+        <div id="row-trabajos" class="row text-center">
+            <?php foreach ($trabajos as $indice => $trabajo): ?>
 
-                <div class="minibarra-lenguajes">
-                    <img class="item-minibarra" data-toggle="tooltip" title="CSS" src="img/lenguajes/css.png">
-                    <img class="item-minibarra" data-toggle="tooltip" title="HTML" src="img/lenguajes/html.png">
-                    <img class="item-minibarra" data-toggle="tooltip" title="PHP" src="img/lenguajes/php.png">
-                    <img class="item-minibarra" data-toggle="tooltip" title="BOOTSTRAP" src="img/lenguajes/bootstrap.png">
-                    <img class="item-minibarra" data-toggle="tooltip" title="JQUERY" src="img/lenguajes/jquery.png">
+                <div id="columna-item-<?php echo $indice; ?>" class="col-md-4 col-sm-6 text-justify padding-bottomtop-10  column-center">
+                    <script>
+                        $(document).ready(function () {
+                            $("#trabajo-item-<?php echo $indice; ?>").hover(
+                                    function () {
+                                        $(this).css('border', '2px solid <?php echo get_field('portafolio_color_general', $trabajo->ID) ?>');
+                                    },
+                                    function () {
+                                        $(this).css('border', '2px solid #B1B19C');
+                                    }
+                            );
+                        });
+                    </script>
+                    <style>
+                        @media (max-width:768px){
+                            #trabajo-item-<?php echo $indice; ?>{
+                                border: 2px solid <?php echo get_field('portafolio_color_general', $trabajo->ID) ?>;
+                            }
+                        }
+                    </style>
+                    <div class="wow fadeInUp fullHeight">
+                        <div id="trabajo-item-<?php echo $indice; ?>" class="trabajo-item-home padding-leftright-10 effect8 fullHeight">
+                            <?php
+                            $imagen = get_field('portafolio_imagen_muestra', $trabajo->ID);
+                            $imagen_url = "";
+                            if (isset($imagen['url'])) {
+                                $imagen_url = $imagen['url'];
+                            }
+                            ?>
+                            <a href="<?php echo get_permalink($trabajo->ID); ?>"><img class="img-responsive" src="<?php echo $imagen_url; ?>"></a>
+                            <a href="<?php echo get_permalink($trabajo->ID); ?>"><h3><?php echo $trabajo->post_title; ?></h3></a>
+                            <p><?php echo $trabajo->post_excerpt; ?></p>
+
+
+                            <?php $tecnologias_usadas = wp_get_post_terms($trabajo->ID, 'tecnologia_usada'); ?> 
+                            <div class="minibarra-lenguajes">
+                                <?php foreach ($tecnologias_usadas as $indice => $tecnologia): ?>
+                                    <?php
+                                    $icono = get_field('tecnologias_usadas_icono', $tecnologia);
+                                    $icono_url = "";
+                                    if (isset($icono['url'])) {
+                                        $icono_url = $icono['url'];
+                                    }
+                                    ?>
+                                    <img class="item-minibarra" data-toggle="tooltip" title="<?php echo $tecnologia->name ?>" src="<?php echo $icono_url; ?>">
+                                <?php endforeach; ?>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-            </div>
+            <?php endforeach; ?>
         </div>
 
-        <div class="col-md-4 col-sm-6 text-justify padding-bottomtop-10">
-            <div class="trabajo-item-home padding-leftright-10">
-                <a href="page-portafolio.php"><img class="img-responsive" src="img/portafolio/fondo_fasor.png"></a>
-                <a href="page-portafolio.php"><h3>Fasor eléctrico</h3></a>
-                <p><a href="http://www.fasor.com.mx">Página web</a> de una pequeña empresa que ofrece servicios de electrificación. También, contiene información sobre el proceso de electrificación y el funcionamiento de algunos equipos usados en el ámbito.</p>
-                <div class="minibarra-lenguajes">
-                    <img class="item-minibarra" data-toggle="tooltip" title="CSS" src="img/lenguajes/css.png">
-                    <img class="item-minibarra" data-toggle="tooltip" title="HTML" src="img/lenguajes/html.png">
-                    <img class="item-minibarra" data-toggle="tooltip" title="PHP" src="img/lenguajes/php.png">
-                    <img class="item-minibarra" data-toggle="tooltip" title="BOOTSTRAP" src="img/lenguajes/bootstrap.png">
-                    <img class="item-minibarra" data-toggle="tooltip" title="JQUERY" src="img/lenguajes/jquery.png">
-                </div> 
-
-            </div>
-        </div>
-
-        <div class="col-md-4 col-sm-6 text-justify padding-bottomtop-10">
-            <div class="trabajo-item-home padding-leftright-10">
-                <a href="page-portafolio.php"><img class="img-responsive" src="img/portafolio/fondo_casysp.png"></a>
-                <a href="page-portafolio.php"><h3>Hormiga CASySP</h3></a>
-                <p>Durante mi estancia laboral en <a href="http://www.cinepop.com.mx/">Cinepop</a> fui el principal desarrollador del sistema CASySP. El cual sirve para controlar y administrar de las ventas efectuadas  en  la  operación. Además, con ayuda de <a href="https://opendatakit.org/use/collect/">ODK</a> se realiza la recolección de datos estadísticos de los eventos de cine y activaciones. </p>
-
-                <div class="minibarra-lenguajes">
-                    <img class="item-minibarra" data-toggle="tooltip" title="PHP" src="img/lenguajes/php.png">
-                    <img class="item-minibarra" data-toggle="tooltip" title="JQUERY" src="img/lenguajes/jquery.png">
-                    <img class="item-minibarra" data-toggle="tooltip" title="ANDROID" src="img/lenguajes/android.png">
-                    <img class="item-minibarra" data-toggle="tooltip" title="SQL" src="img/lenguajes/sql.png">
-                    <img class="item-minibarra" data-toggle="tooltip" title="CSS" src="img/lenguajes/css.png">
-                    <img class="item-minibarra" data-toggle="tooltip" title="HTML" src="img/lenguajes/html.png">
-                    <img class="item-minibarra" data-toggle="tooltip" title="BOOTSTRAP" src="img/lenguajes/bootstrap.png">
-
-                </div> 
-
-            </div>
-        </div>
 
 
         <div class="col-xs-12">
             <div class="margin-top-10">
-                <a class="btn btn-primary fs-18 btn-arrow" href="page-portafolio.php">Ir a mi Portafolio &nbsp; <i class="fa fa-angle-double-right"></i></a>
+                <a class="btn btn-primary fs-18 btn-arrow" href="<?php echo get_field('admin_home_page_portafolio_url', 'options'); ?>">Ir a mi Portafolio &nbsp; <i class="fa fa-angle-double-right"></i></a>
             </div>
         </div>
 
@@ -69,12 +85,23 @@
     </div>
 </div>
 
-<div class="division-codigo"></div>
+
+<?php
+$imagen_div = get_field('admin_home_page_portafolio_imagen_division', 'options');
+$imagen_div_url = "";
+if (isset($imagen_div['url'])) {
+    $imagen_div_url = $imagen_div['url'];
+}
+?>
+<div class="division-codigo" style="background-image:url('<?php echo $imagen_div_url; ?>');">
+    <div class="over-transparency"></div>
+</div>
+
 <script>
     $(window).load(function () {
-        equalheight(".trabajo-item-home");
+        equalheight("div[id^='columna-item' ");
     });
     $(window).resize(function () {
-        equalheight(".trabajo-item-home");
+        equalheight("div[id^='columna-item' ");
     });
 </script>

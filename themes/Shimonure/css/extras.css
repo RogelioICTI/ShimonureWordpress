@@ -53,6 +53,14 @@ h1{
     }
 }
 
+.img-responsive{
+    width: 100%;
+}
+
+.fullHeight{
+    height: 100%;
+}
+
 .column-center{
     float:none; 
     display: inline-block;

@@ -129,6 +129,40 @@ function init_custom_field_home() {
                     'preview_size' => 'thumbnail',
                     'library' => 'all',
                 ),
+                /*
+                 * Portafolio
+                 */
+                array(
+                    'key' => $key_campo . '_tab_4',
+                    'type' => 'tab',
+                    'label' => 'Portafolio',
+                    'placement' => 'top',
+                    'endpoint' => 0,
+                ),
+                array(
+                    'key' => $key_campo . '_field_11',
+                    'label' => 'Título de la sección de Portafolio',
+                    'name' => $key_campo . '_portafolio_titulo',
+                    'type' => 'text',
+                    'required' => 0,
+                ),
+                array(
+                    'key' => $key_campo . '_field_13',
+                    'label' => 'URL a mi Portafolio',
+                    'name' => $key_campo . '_portafolio_url',
+                    'type' => 'text',
+                    'required' => 0,
+                ),
+                array(
+                    'key' => $key_campo . '_field_12',
+                    'label' => 'Imagen de División',
+                    'name' => $key_campo . '_portafolio_imagen_division',
+                    'type' => 'image',
+                    'required' => 0,
+                    'save_format' => 'object',
+                    'preview_size' => 'thumbnail',
+                    'library' => 'all',
+                ),
             ),
             'location' => array(
                 array(
