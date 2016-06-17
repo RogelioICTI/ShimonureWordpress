@@ -163,6 +163,47 @@ function init_custom_field_home() {
                     'preview_size' => 'thumbnail',
                     'library' => 'all',
                 ),
+                /*
+                 * Contacto
+                 */
+                array(
+                    'key' => $key_campo . '_tab_5',
+                    'type' => 'tab',
+                    'label' => 'Contacto',
+                    'placement' => 'top',
+                    'endpoint' => 0,
+                ),
+                array(
+                    'key' => $key_campo . '_field_14',
+                    'label' => 'Título de la sección',
+                    'name' => $key_campo . '_contacto_titulo',
+                    'type' => 'text',
+                    'required' => 0,
+                ),
+                array(
+                    'key' => $key_campo . '_field_15',
+                    'label' => 'Mensaje',
+                    'name' => $key_campo . '_contacto_mensaje',
+                    'type' => 'text',
+                    'required' => 0,
+                ),
+                array(
+                    'key' => $key_campo . '_field_17',
+                    'label' => 'URL Contacto',
+                    'name' => $key_campo . '_contacto_url',
+                    'type' => 'text',
+                    'required' => 0,
+                ),
+                array(
+                    'key' => $key_campo . '_field_16',
+                    'label' => 'Imagen Contacto',
+                    'name' => $key_campo . '_contacto_imagen',
+                    'type' => 'image',
+                    'required' => 0,
+                    'save_format' => 'object',
+                    'preview_size' => 'thumbnail',
+                    'library' => 'all',
+                ),
             ),
             'location' => array(
                 array(
