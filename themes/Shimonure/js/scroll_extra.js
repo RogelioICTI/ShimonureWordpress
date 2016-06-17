@@ -7,6 +7,7 @@ function collapseNavbar() {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
         $(".navbar-default .navbar-nav > .active > a").addClass("navbar-link-start");
         
+        
     }
 }
 

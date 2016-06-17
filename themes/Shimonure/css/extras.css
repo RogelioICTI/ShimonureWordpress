@@ -65,26 +65,20 @@ h1{
     display: table;
     width: 100%;
     height: auto;
-    padding-bottom: 50px;
+    /*padding-bottom: 50px;*/
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/banner.png');
-    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/banner.png');
-    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/banner.png');
-    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/banner.png');
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url('../img/banner.png');
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/banner.png');
-
 }
 
 .banner-info{
     padding-top: 13%; 
     color: #FFF; 
-    text-align: center
+    text-align: center;
+    padding-bottom: 50px;
 }
 
 .banner-info p{
@@ -312,16 +306,15 @@ h1{
     transition: background .5s ease-in-out,padding .5s ease-in-out;
     color: #FFFFFF;
 }
-.navbar-link-start{
 
+.navbar-link-start{
     color: rgba(255, 255, 255, 0.61) !important;
     background-color: transparent !important;
+    background: transparent !important;
     text-decoration: underline;
 }
 
-.navbar-link-start:focus{
-    background-color: transparent !important;
-}
+
 
 @media(min-width:768px) {
     .navbar-default {
