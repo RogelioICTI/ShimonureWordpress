@@ -74,12 +74,13 @@ $trabajos = get_posts($args);
         </div>
 
 
-
+<!--
         <div class="col-xs-12">
             <div class="margin-top-10">
                 <a class="btn btn-primary fs-18 btn-arrow" href="<?php echo get_field('admin_home_page_portafolio_url', 'options'); ?>">Ir a mi Portafolio &nbsp; <i class="fa fa-angle-double-right"></i></a>
             </div>
         </div>
+-->
 
 
     </div>

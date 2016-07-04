@@ -36,6 +36,17 @@ function init_custom_field_portafolio() {
                     'preview_size' => 'thumbnail',
                     'library' => 'all',
                 ),
+                
+                array(
+                    'key' => $key_campo . '_field_2',
+                    'label' => 'Galería',
+                    'name' => $key_campo . '_galeria',
+                    'type' => 'gallery',
+                    'preview_size' => 'thumbnail',
+                    'required' => 0,
+                    'save_format' => 'object',
+                    'library' => 'all',
+                ),
                
                 
                 
